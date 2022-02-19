@@ -1,13 +1,14 @@
 const container = document.querySelector('.container')
 const sizeEl = document.querySelector('.size')
-const size = sizeEl.value
+let size = sizeEl.value
 const color = document.querySelector('.color')
+const resetBtn = document.querySelector('.reset')
 
 let draw=false
 
 function populate(size){
     container.style.setProperty('--size',size)
-    for(let i=0; i<size *size; i++){
+    for(let i=0; i<size * size; i++){
         const div = document.createElement("div")
         div.classList.add("pixel")
 
@@ -29,6 +30,18 @@ window.addEventListener('mousedown', function(){
 
 window.addEventListener('mouseup', function(){
     draw = false
+})
+
+function reset(){
+    container.innerHTML = ''
+    populate(size)
+}
+
+resetBtn.addEventListener('click',reset)
+
+sizeEl.addEventListener('keyup',function(){
+    size = sizeEl.value
+    reset()
 })
 
 populate(10)
