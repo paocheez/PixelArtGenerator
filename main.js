@@ -16,6 +16,7 @@ function populate(size){
             if(!draw)return 
             div.style.backgroundColor = color.value
         })
+
         div.addEventListener('mousedown', function(){
             div.style.backgroundColor = color.value
         })
@@ -43,5 +44,6 @@ sizeEl.addEventListener('keyup',function(){
     size = sizeEl.value
     reset()
 })
+
 
 populate(10)

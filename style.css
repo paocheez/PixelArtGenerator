@@ -31,20 +31,35 @@ body{
         background-position: 0 50%;
     }
 }
+
 .container{
     background-color: rgb(235, 230, 230);
     width: 800px;
+    box-shadow: 3px 3px 3px rgba(53, 50, 50, 0.411);
 }
 
 .navbar{
-    background-color: #F1C0E8;
+    background-color: #f1c0e8b2;
     width: 800px;
     padding: 1em;
     margin-bottom: 1em;
     border-radius: 3px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    box-shadow: 3px 3px 3px rgba(53, 50, 50, 0.411);
+}
+
+.btn-actions{
+    display: flex;
+    align-items: center;
+}
+
+.title-app{
+    font-weight: bolder;
+    font-size: 25px;
+    color: #838485;
+    text-shadow: 4px 4px 7px #FDE4CF;
 }
 
 .btn, input{
@@ -75,6 +90,7 @@ body{
     width: 100px;
     margin: 0 1em;
     border: none;
+    cursor: pointer;
 }
 
 .size{
